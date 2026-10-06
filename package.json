@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 62023",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview --host 0.0.0.0 --port 62023"
+    "preview": "vite preview --host 0.0.0.0 --port 62023",
+    "test:engine": "esbuild checks/engine.test.ts --bundle --platform=node --format=esm --outfile=node_modules/.cache/engine.test.mjs && node node_modules/.cache/engine.test.mjs"
   },
   "dependencies": {
     "@vee-validate/zod": "^4.15.1",
